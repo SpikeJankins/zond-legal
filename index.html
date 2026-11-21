@@ -20,7 +20,7 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: var(--navy); background: var(--white); overflow-x: hidden; }
 
-    /* ─── Shared buttons ─── */
+    /* Shared buttons */
     .btn { display: inline-block; padding: 12px 26px; border-radius: 100px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; text-decoration: none; transition: all .2s; cursor: pointer; border: none; }
     .btn-primary { background: var(--yellow); color: var(--navy); }
     .btn-primary:hover { background: #e8a00f; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(250,177,16,.35); }
@@ -34,7 +34,7 @@
 
     .section-eyebrow { display: inline-block; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
 
-    /* ═══ NAV ═══ */
+    /* NAV */
     nav {
       position: sticky; top: 0; z-index: 100;
       background: rgba(255,255,255,0.95);
@@ -49,7 +49,7 @@
     .nav-links a { text-decoration: none; color: var(--muted); font-size: 15px; font-weight: 500; transition: color .2s; }
     .nav-links a:hover { color: var(--navy); }
 
-    /* ═══ HERO ═══ */
+    /* HERO */
     .hero { min-height: 90vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px; padding: 80px 60px; }
     .hero-eyebrow { display: inline-block; background: rgba(250,177,16,.12); color: #B8840A; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 28px; }
     .hero h1 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(42px, 5vw, 64px); line-height: 1.05; letter-spacing: -2px; margin-bottom: 24px; }
@@ -98,15 +98,31 @@
     .fb-top { top: 20px; right: -10px; }
     .fb-bot { bottom: 30px; left: -40px; }
 
-    /* ═══ MARQUEE ═══ */
+    /* MARQUEE */
     .marquee-section { background: var(--navy); padding: 22px 0; overflow: hidden; }
-    .marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
+    .marquee-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
     @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     .marquee-item { display: flex; align-items: center; padding: 0 28px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,.35); white-space: nowrap; }
     .marquee-item.hi { color: var(--yellow); }
     .marquee-sep { color: rgba(250,177,16,.3); margin: 0 6px; }
 
-    /* ═══ ROOMS ═══ */
+    /* PARTNERS STRIP */
+    .partners-strip { background: var(--grey); padding: 28px 60px; border-bottom: 1px solid rgba(11,28,50,.07); }
+    .partners-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 36px; flex-wrap: wrap; justify-content: center; }
+    .partners-label { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+    .partner-logo-wrap { display: flex; align-items: center; gap: 12px; background: var(--white); border-radius: 14px; padding: 12px 22px; box-shadow: 0 1px 8px rgba(11,28,50,.08); text-decoration: none; transition: transform .2s, box-shadow .2s; }
+    .partner-logo-wrap:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(11,28,50,.13); }
+    .partner-logo-img { height: 30px; width: auto; display: block; }
+    .partner-logo-info { }
+    .partner-logo-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 13px; color: var(--navy); line-height: 1.2; }
+    .partner-logo-sub { font-size: 10px; color: var(--muted); margin-top: 1px; }
+    .partners-divider { width: 1px; height: 32px; background: rgba(11,28,50,.12); flex-shrink: 0; }
+    .partners-geo { display: flex; align-items: center; gap: 10px; }
+    .geo-flags { display: flex; gap: 6px; font-size: 22px; }
+    .geo-label { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; color: var(--navy); }
+    .geo-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    /* ROOMS */
     .rooms { background: var(--navy); overflow: hidden; }
     .rooms-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 680px; }
     .rooms-content { padding: 80px 64px; display: flex; flex-direction: column; justify-content: center; }
@@ -140,8 +156,6 @@
     .rp-topic-text { font-size: 11px; font-weight: 700; color: var(--navy); margin-bottom: 6px; line-height: 1.3; }
     .rp-topic-tags { display: flex; gap: 5px; }
     .rp-topic-tag { background: #FEF3DC; color: #B8840A; padding: 2px 8px; border-radius: 100px; font-size: 9px; font-weight: 700; font-family: 'Montserrat', sans-serif; }
-
-    /* Circular room area */
     .rp-circle-area { position: relative; height: 200px; background: var(--cream); display: flex; align-items: center; justify-content: center; }
     .rp-bg-ring { position: absolute; border-radius: 50%; border: 1px solid rgba(250,177,16,.15); top: 50%; left: 50%; transform: translate(-50%,-50%); }
     .rp-bg-ring:nth-child(1) { width: 80px; height: 80px; }
@@ -180,8 +194,6 @@
     .rp-ctrl-raise span { font-size: 14px; }
     .rp-ctrl-speak { background: var(--yellow); border-radius: 100px; padding: 9px 14px; display: flex; align-items: center; gap: 5px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; color: var(--navy); flex: 1; justify-content: center; }
     .rp-ctrl-vol { width: 30px; height: 30px; background: rgba(0,0,0,.07); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; }
-
-    /* Room chat sheet (new!) */
     .rp-chat-sheet { background: rgba(11,28,50,.96); border-radius: 16px 16px 0 0; padding: 10px 12px 12px; }
     .rp-chat-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
     .rp-chat-title { font-family: 'Montserrat', sans-serif; font-size: 8px; font-weight: 700; color: rgba(255,255,255,.35); letter-spacing: .08em; text-transform: uppercase; }
@@ -194,23 +206,19 @@
     .rp-chat-input { display: flex; align-items: center; gap: 7px; background: rgba(255,255,255,.08); border-radius: 100px; padding: 5px 5px 5px 10px; margin-top: 7px; }
     .rp-chat-input-ph { font-size: 9px; color: rgba(255,255,255,.25); flex: 1; }
     .rp-chat-send { width: 20px; height: 20px; border-radius: 50%; background: var(--yellow); display: flex; align-items: center; justify-content: center; font-size: 9px; flex-shrink: 0; }
-
-    /* AI suggest in room */
     .rp-ai-suggest { display: flex; align-items: center; gap: 7px; background: rgba(250,177,16,.08); border: 1px solid rgba(250,177,16,.18); border-radius: 10px; padding: 7px 10px; margin-bottom: 6px; }
     .rp-ai-avatars { display: flex; }
     .rp-ai-av { width: 18px; height: 18px; border-radius: 50%; background: #1e2d40; border: 1.5px solid rgba(11,28,50,1); font-size: 9px; display: flex; align-items: center; justify-content: center; }
     .rp-ai-av + .rp-ai-av { margin-left: -5px; }
     .rp-ai-text { font-size: 8.5px; color: rgba(255,255,255,.65); flex: 1; line-height: 1.35; }
     .rp-ai-text strong { color: var(--yellow); font-weight: 700; }
-
-    /* Floating room badges */
     .room-notif { position: absolute; top: 24px; right: 18px; background: var(--white); border-radius: 16px; padding: 12px 16px; box-shadow: 0 8px 32px rgba(0,0,0,.2); max-width: 180px; z-index: 4; }
     .room-notif-label { font-size: 9px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; font-family: 'Montserrat', sans-serif; margin-bottom: 3px; }
     .room-notif-title { font-size: 12px; font-weight: 700; color: var(--navy); font-family: 'Montserrat', sans-serif; line-height: 1.3; }
     .room-notif-badge { display: inline-block; background: var(--yellow); color: var(--navy); font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 100px; font-family: 'Montserrat', sans-serif; margin-top: 5px; }
     .room-count-badge { position: absolute; bottom: 24px; left: 24px; background: rgba(250,177,16,.15); border: 1px solid rgba(250,177,16,.25); border-radius: 100px; padding: 7px 14px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; color: var(--yellow); z-index: 4; white-space: nowrap; }
 
-    /* ═══ CARDS / SWIPE / AUDIO ═══ */
+    /* CARDS / SWIPE / AUDIO */
     .cards-section { padding: 100px 60px; background: var(--white); overflow: hidden; }
     .cards-header { max-width: 680px; margin: 0 auto 72px; text-align: center; }
     .cards-header h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 16px; }
@@ -218,8 +226,6 @@
     .cards-header p { font-size: 16px; color: var(--muted); line-height: 1.65; }
     .cards-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: start; }
     .cards-col-label { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 13px; letter-spacing: -.2px; margin-bottom: 14px; color: var(--navy); }
-
-    /* Audio profile card */
     .audio-profile-card { background: var(--grey); border-radius: 28px; padding: 28px 24px; }
     .apc-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(250,177,16,.15); color: #B8840A; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; padding: 5px 12px; border-radius: 100px; margin-bottom: 20px; }
     .apc-avatar-row { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
@@ -236,8 +242,6 @@
     .ap-time { font-size: 11px; color: rgba(255,255,255,.4); font-family: 'Montserrat', sans-serif; font-weight: 600; white-space: nowrap; }
     .apc-skills { display: flex; flex-wrap: wrap; gap: 6px; }
     .apc-skill { background: var(--white); border-radius: 100px; padding: 5px 12px; font-size: 12px; font-weight: 600; color: var(--navy); font-family: 'Montserrat', sans-serif; }
-
-    /* Swipe card */
     .swipe-col { display: flex; flex-direction: column; align-items: center; gap: 16px; padding-top: 36px; }
     .swipe-phone-wrap { position: relative; width: 220px; }
     .swipe-phone-wrap::before { content: ''; position: absolute; top: 10px; left: 10px; right: -10px; bottom: -6px; background: #1a2a40; border-radius: 28px; transform: rotate(3deg); z-index: 0; }
@@ -264,8 +268,6 @@
     .sw-connect { background: var(--yellow); box-shadow: 0 4px 16px rgba(250,177,16,.4); }
     .swipe-bottom-bar { background: rgba(255,255,255,.04); border-top: 1px solid rgba(255,255,255,.06); padding: 8px 12px; text-align: center; font-size: 10px; color: rgba(255,255,255,.3); font-style: italic; }
     .swipe-tagline { font-size: 12px; color: var(--muted); font-style: italic; text-align: center; }
-
-    /* Company challenge card */
     .challenge-card { background: var(--navy); border-radius: 28px; padding: 28px 24px; }
     .cc-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(250,177,16,.15); color: var(--yellow); font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; padding: 5px 12px; border-radius: 100px; margin-bottom: 20px; }
     .cc-company-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
@@ -284,7 +286,51 @@
     .cc-need-text { font-size: 13px; color: rgba(255,255,255,.65); }
     .cc-apply { width: 100%; background: var(--yellow); color: var(--navy); border: none; border-radius: 100px; padding: 13px; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 14px; cursor: pointer; }
 
-    /* ═══ AI MATCH SECTION (new) ═══ */
+    /* AR SECTION */
+    .ar-section { background: var(--navy); padding: 100px 60px; overflow: hidden; position: relative; }
+    .ar-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 75% 50%, rgba(250,177,16,.05) 0%, transparent 70%); pointer-events: none; }
+    .ar-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; }
+    .ar-copy .section-eyebrow { color: rgba(255,255,255,.4); }
+    .ar-copy h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(32px, 3.5vw, 50px); letter-spacing: -1.5px; color: var(--white); line-height: 1.08; margin-bottom: 20px; }
+    .ar-copy h2 em { font-style: italic; color: var(--yellow); }
+    .ar-copy > p { font-size: 16px; line-height: 1.72; color: rgba(255,255,255,.55); max-width: 460px; margin-bottom: 36px; }
+    .ar-bullets { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
+    .ar-bullet { display: flex; align-items: flex-start; gap: 14px; }
+    .ar-bullet-icon { width: 36px; height: 36px; border-radius: 10px; background: rgba(250,177,16,.12); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+    .ar-bullet-text h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; color: var(--white); margin-bottom: 3px; }
+    .ar-bullet-text p { font-size: 13px; color: rgba(255,255,255,.45); line-height: 1.5; margin: 0; }
+    .ar-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+    .ar-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 100px; padding: 7px 16px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: rgba(255,255,255,.75); }
+
+    /* AR phone */
+    .ar-phone-wrap { display: flex; justify-content: center; align-items: center; }
+    .ar-phone { width: 240px; height: 490px; background: #040810; border-radius: 40px; padding: 14px; box-shadow: 0 40px 80px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.08); }
+    .ar-phone-inner { width: 100%; height: 100%; background: #060d1a; border-radius: 30px; overflow: hidden; display: flex; flex-direction: column; }
+    .ar-cam-view { flex: 1; position: relative; background: radial-gradient(ellipse at 50% 60%, #0c1e38 0%, #040810 100%); overflow: hidden; }
+    .ar-cam-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(250,177,16,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(250,177,16,.04) 1px, transparent 1px); background-size: 32px 32px; }
+    .ar-cam-label { position: absolute; top: 12px; left: 14px; font-family: 'Montserrat', sans-serif; font-size: 8px; font-weight: 700; color: rgba(255,255,255,.4); letter-spacing: .1em; text-transform: uppercase; }
+    .ar-cam-label-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--yellow); margin-right: 4px; vertical-align: middle; }
+    .ar-person { position: absolute; display: flex; flex-direction: column; align-items: center; }
+    .ar-sil { border-radius: 20px 20px 0 0; background: rgba(255,255,255,.07); position: relative; }
+    .ar-sil::before { content: ''; position: absolute; border-radius: 50%; background: rgba(255,255,255,.08); left: 50%; transform: translateX(-50%); }
+    .ar-floating-card { background: rgba(8,20,40,.9); backdrop-filter: blur(10px); border: 1px solid rgba(250,177,16,.3); border-radius: 12px; padding: 7px 11px; white-space: nowrap; box-shadow: 0 6px 20px rgba(0,0,0,.5); margin-bottom: 6px; position: relative; }
+    .ar-floating-card::after { content: ''; position: absolute; bottom: -7px; left: 50%; transform: translateX(-50%); width: 1px; height: 10px; background: rgba(250,177,16,.35); }
+    .ar-fc-name { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 800; color: var(--white); }
+    .ar-fc-vibe { font-size: 9px; color: var(--yellow); font-weight: 600; margin-top: 1px; }
+    .ar-fc-match { font-size: 8px; color: rgba(255,255,255,.4); margin-top: 2px; font-family: 'Montserrat', sans-serif; font-weight: 700; }
+    .ar-pulse-ring { position: absolute; border-radius: 50%; border: 1.5px solid rgba(250,177,16,.25); animation: ar-pulse 2.4s ease-out infinite; }
+    @keyframes ar-pulse { 0% { opacity: .6; transform: translate(-50%, -50%) scale(.7); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.5); } }
+    .ar-p1 { bottom: 95px; left: 40px; }
+    .ar-p2 { bottom: 90px; right: 32px; }
+    .ar-p3 { bottom: 75px; left: 50%; transform: translateX(-50%); }
+    .ar-crosshair { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; }
+    .ar-crosshair::before { content: ''; position: absolute; inset: 0; border: 1.5px solid rgba(250,177,16,.25); border-radius: 50%; }
+    .ar-crosshair::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 6px; height: 6px; border-radius: 50%; background: var(--yellow); box-shadow: 0 0 10px var(--yellow); }
+    .ar-status-bar { background: rgba(4,8,16,.85); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; }
+    .ar-status-label { font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 700; color: rgba(255,255,255,.4); letter-spacing: .06em; text-transform: uppercase; }
+    .ar-status-count { font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 700; color: var(--yellow); }
+
+    /* AI MATCH SECTION */
     .ai-section { padding: 100px 60px; background: var(--navy); overflow: hidden; position: relative; }
     .ai-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 80% at 25% 50%, rgba(250,177,16,.06) 0%, transparent 65%); pointer-events: none; }
     .ai-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; }
@@ -298,8 +344,6 @@
     .ai-feat-icon { width: 40px; height: 40px; border-radius: 12px; background: rgba(250,177,16,.12); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
     .ai-feat-text h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; color: var(--white); margin-bottom: 5px; }
     .ai-feat-text p { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.55; margin: 0; }
-
-    /* AI Phone mockup */
     .ai-phone-wrap { display: flex; justify-content: center; align-items: center; }
     .ai-phone { width: 240px; height: 490px; background: var(--navy); border-radius: 40px; padding: 14px; box-shadow: 0 40px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08); }
     .ai-phone-inner { width: 100%; height: 100%; background: #0d1117; border-radius: 30px; overflow: hidden; display: flex; flex-direction: column; }
@@ -324,7 +368,7 @@
     .ai-mr-tag { font-size: 8.5px; color: rgba(255,255,255,.4); margin-top: 1px; }
     .ai-mr-pct { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 900; color: var(--yellow); }
 
-    /* ═══ SHIFT ═══ */
+    /* SHIFT */
     .shift { padding: 100px 60px; background: var(--white); }
     .shift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .shift-left h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(32px, 4vw, 50px); line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 24px; }
@@ -339,7 +383,7 @@
     .shift-stat.dark .shift-stat-num { color: var(--white); }
     .shift-stat.dark .shift-stat-label { color: rgba(255,255,255,.5); }
 
-    /* ═══ FOR WHO ═══ */
+    /* FOR WHO */
     .for-who { padding: 100px 60px; background: var(--grey); }
     .for-who-header { text-align: center; margin-bottom: 60px; }
     .for-who-header h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(30px, 3.5vw, 46px); letter-spacing: -1.5px; margin-bottom: 16px; }
@@ -354,9 +398,9 @@
     .persona-card p { font-size: 15px; line-height: 1.65; color: var(--muted); margin-bottom: 24px; }
     .persona-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .persona-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--navy); line-height: 1.4; }
-    .persona-features li::before { content: '→'; color: var(--yellow); font-weight: 700; font-family: 'Montserrat', sans-serif; flex-shrink: 0; margin-top: 1px; }
+    .persona-features li::before { content: '->'; color: var(--yellow); font-weight: 700; font-family: 'Montserrat', sans-serif; flex-shrink: 0; margin-top: 1px; }
 
-    /* ═══ PROJECTS & STARTUPS (new) ═══ */
+    /* PROJECTS & STARTUPS */
     .projects-section { padding: 100px 60px; background: var(--cream); overflow: hidden; }
     .projects-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .projects-copy h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(32px, 3.5vw, 50px); letter-spacing: -1.5px; line-height: 1.08; margin-bottom: 20px; }
@@ -372,8 +416,6 @@
     .project-needs { display: flex; gap: 5px; flex-wrap: wrap; }
     .need-chip { font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 700; background: rgba(11,28,50,.07); color: var(--navy); padding: 3px 8px; border-radius: 100px; }
     .match-badge { background: var(--yellow); color: var(--navy); font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 800; padding: 7px 14px; border-radius: 100px; white-space: nowrap; flex-shrink: 0; box-shadow: 0 2px 8px rgba(250,177,16,.3); }
-
-    /* Projects phone mockup */
     .proj-phone-wrap { display: flex; justify-content: center; }
     .proj-phone { width: 240px; height: 490px; background: var(--navy); border-radius: 40px; padding: 14px; box-shadow: 0 40px 80px rgba(11,28,50,.25), 0 0 0 1px rgba(0,0,0,.08); }
     .proj-phone-inner { width: 100%; height: 100%; background: var(--grey); border-radius: 30px; overflow: hidden; display: flex; flex-direction: column; }
@@ -397,7 +439,7 @@
     .proj-ai-match { font-size: 8px; color: var(--muted); display: flex; align-items: center; gap: 4px; }
     .proj-ai-match::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #34d399; flex-shrink: 0; }
 
-    /* ═══ HOW ═══ */
+    /* HOW */
     .how { padding: 100px 60px; background: var(--navy); }
     .how-header { text-align: center; margin-bottom: 60px; }
     .how-header .section-eyebrow { color: rgba(255,255,255,.4); }
@@ -409,7 +451,7 @@
     .step-card h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 20px; color: var(--white); letter-spacing: -.5px; margin-bottom: 12px; }
     .step-card p { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,.5); }
 
-    /* ═══ SECTORS ═══ */
+    /* SECTORS */
     .sectors { padding: 80px 60px; background: var(--white); }
     .sectors-header { text-align: center; margin-bottom: 48px; }
     .sectors-header h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(28px, 3vw, 42px); letter-spacing: -1.5px; margin-bottom: 14px; }
@@ -422,7 +464,7 @@
     .sector-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: var(--navy); }
     .sector-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
 
-    /* ═══ FEATURES ═══ */
+    /* FEATURES */
     .features { padding: 100px 60px; background: var(--grey); }
     .features-header { text-align: center; margin-bottom: 60px; }
     .features-header h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(28px, 3.5vw, 44px); letter-spacing: -1.5px; margin-bottom: 14px; }
@@ -434,14 +476,30 @@
     .feat-card h4 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: var(--navy); margin-bottom: 8px; }
     .feat-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
-    /* ═══ CTA ═══ */
+    /* CTA */
     .cta { background: var(--yellow); padding: 100px 60px; text-align: center; }
     .cta h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(32px, 4.5vw, 56px); letter-spacing: -2px; color: var(--navy); line-height: 1.08; margin-bottom: 20px; }
     .cta h2 em { font-style: italic; }
     .cta > p { font-size: 18px; color: rgba(11,28,50,.7); max-width: 520px; margin: 0 auto 40px; line-height: 1.65; }
     .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
-    /* ═══ FOOTER ═══ */
+    /* FOUNDERS */
+    .founders-section { background: var(--white); padding: 80px 60px; }
+    .founders-header { text-align: center; margin-bottom: 52px; }
+    .founders-header .section-eyebrow { color: var(--muted); }
+    .founders-header h2 { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(28px, 3.5vw, 42px); letter-spacing: -1.5px; color: var(--navy); margin-bottom: 12px; }
+    .founders-header h2 em { font-style: italic; color: var(--yellow); }
+    .founders-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 680px; margin: 0 auto; }
+    .founder-card { background: var(--grey); border-radius: 24px; padding: 36px 28px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; transition: transform .2s, box-shadow .2s; }
+    .founder-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(11,28,50,.1); }
+    .founder-av { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, rgba(250,177,16,.25) 0%, rgba(250,177,16,.08) 100%); border: 2px solid rgba(250,177,16,.4); display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 24px; color: var(--yellow); }
+    .founder-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 18px; color: var(--navy); letter-spacing: -.3px; }
+    .founder-role { font-size: 13px; color: var(--muted); }
+    .founder-linkedin { display: inline-flex; align-items: center; gap: 6px; background: var(--navy); border-radius: 100px; padding: 8px 18px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; color: var(--white); text-decoration: none; transition: background .2s; }
+    .founder-linkedin:hover { background: #1a3a60; }
+    .founder-linkedin-icon { font-size: 14px; }
+
+    /* FOOTER */
     footer { background: var(--navy); padding: 60px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
     .footer-logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 22px; color: var(--white); letter-spacing: -.5px; }
     .footer-logo .dot { color: var(--yellow); }
@@ -450,17 +508,20 @@
     .footer-links a:hover { color: rgba(255,255,255,.75); }
     .footer-copy { font-size: 13px; color: rgba(255,255,255,.25); }
 
-    /* ═══ RESPONSIVE ═══ */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
       .nav-links { display: none; }
       .hero { grid-template-columns: 1fr; min-height: auto; padding: 60px 24px; gap: 48px; }
       .hero-visual { height: 440px; }
+      .partners-strip { padding: 24px; }
       .rooms-inner { grid-template-columns: 1fr; }
       .rooms-content { padding: 60px 24px; }
       .rooms-visual-panel { padding: 48px 24px; }
       .cards-section { padding: 70px 24px; }
       .cards-grid { grid-template-columns: 1fr; }
+      .ar-section { padding: 70px 24px; }
+      .ar-inner { grid-template-columns: 1fr; gap: 48px; }
       .ai-section { padding: 70px 24px; }
       .ai-inner { grid-template-columns: 1fr; gap: 48px; }
       .shift { padding: 70px 24px; }
@@ -475,15 +536,19 @@
       .features { padding: 70px 24px; }
       .feat-grid { grid-template-columns: 1fr 1fr; }
       .cta { padding: 70px 24px; }
+      .founders-section { padding: 60px 24px; }
+      .founders-grid { max-width: 100%; }
       footer { padding: 48px 24px; }
     }
     @media (max-width: 600px) {
       .feat-grid { grid-template-columns: 1fr; }
       .hero h1 { font-size: 36px; }
+      .founders-grid { grid-template-columns: 1fr; }
+      .partners-inner { gap: 20px; }
     }
     .rooms-safe-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 100px; padding: 10px 20px; font-size: 13px; color: rgba(255,255,255,.65); font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 36px; letter-spacing: .01em; }
     @media (prefers-reduced-motion: reduce) {
-      .marquee-track, .radar-sweep { animation: none; }
+      .marquee-track, .radar-sweep, .ar-pulse-ring { animation: none; }
     }
   </style>
 </head>
@@ -494,21 +559,22 @@
   <a class="nav-logo" href="#">Зо<span class="dot">nd</span></a>
   <div class="nav-links">
     <a href="#rooms">Rooms</a>
+    <a href="#ar">AR Mode</a>
     <a href="#ai">AI Match</a>
     <a href="#projects">Projects</a>
     <a href="#for-who">For who</a>
-    <a href="mailto:hello@zond.app" class="btn btn-primary" style="font-size:13px;padding:9px 20px;">Get an invite</a>
+    <a href="https://apps.apple.com/us/app/%D0%B7ond/id6813986591" target="_blank" class="btn btn-primary" style="font-size:13px;padding:9px 20px;">App Store</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-copy">
-    <span class="hero-eyebrow">Professional Proximity Network</span>
+    <span class="hero-eyebrow">Ukraine x USA · Professional Proximity Network</span>
     <h1>A new era of work<br>needs <em>new tools.</em></h1>
-    <p class="hero-desc">Зоnd reads your signal and finds the people thinking the same way you are. Rooms for conversations, swipe for connections, AI for precision matching.</p>
+    <p class="hero-desc">Зоnd reads your signal and finds the people thinking the same way you are. Rooms for conversations, AR for real-world discovery, AI for precision matching. Built for Ukraine and the USA.</p>
     <div class="hero-cta">
-      <a href="https://testflight.apple.com/join/zond" class="btn btn-primary btn-lg">Join Beta</a>
+      <a href="https://apps.apple.com/us/app/%D0%B7ond/id6813986591" target="_blank" class="btn btn-primary btn-lg">Download on App Store</a>
       <a href="mailto:hello@zond.app" class="btn btn-outline btn-lg">Get an invite</a>
     </div>
     <div class="hero-proof">
@@ -586,21 +652,49 @@
     <span class="marquee-item hi">Proximity Network<span class="marquee-sep">◆</span></span>
     <span class="marquee-item">AI-powered matching<span class="marquee-sep">◆</span></span>
     <span class="marquee-item hi">Live Rooms<span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">AR Social Discovery<span class="marquee-sep">◆</span></span>
+    <span class="marquee-item hi">Cal Poly Pomona<span class="marquee-sep">◆</span></span>
     <span class="marquee-item">Voice profiles<span class="marquee-sep">◆</span></span>
     <span class="marquee-item hi">Projects & Startups<span class="marquee-sep">◆</span></span>
     <span class="marquee-item">Company challenges<span class="marquee-sep">◆</span></span>
-    <span class="marquee-item hi">Zero feed<span class="marquee-sep">◆</span></span>
-    <span class="marquee-item">Real connections<span class="marquee-sep">◆</span></span>
+    <span class="marquee-item hi">Ukraine x USA<span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">Zero feed<span class="marquee-sep">◆</span></span>
+    <span class="marquee-item hi">Real connections<span class="marquee-sep">◆</span></span>
     <span class="marquee-item hi">Proximity Network<span class="marquee-sep">◆</span></span>
     <span class="marquee-item">AI-powered matching<span class="marquee-sep">◆</span></span>
     <span class="marquee-item hi">Live Rooms<span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">AR Social Discovery<span class="marquee-sep">◆</span></span>
+    <span class="marquee-item hi">Cal Poly Pomona<span class="marquee-sep">◆</span></span>
     <span class="marquee-item">Voice profiles<span class="marquee-sep">◆</span></span>
     <span class="marquee-item hi">Projects & Startups<span class="marquee-sep">◆</span></span>
     <span class="marquee-item">Company challenges<span class="marquee-sep">◆</span></span>
-    <span class="marquee-item hi">Zero feed<span class="marquee-sep">◆</span></span>
-    <span class="marquee-item">Real connections<span class="marquee-sep">◆</span></span>
+    <span class="marquee-item hi">Ukraine x USA<span class="marquee-sep">◆</span></span>
+    <span class="marquee-item">Zero feed<span class="marquee-sep">◆</span></span>
+    <span class="marquee-item hi">Real connections<span class="marquee-sep">◆</span></span>
   </div>
 </div>
+
+<!-- PARTNERS STRIP -->
+<section class="partners-strip">
+  <div class="partners-inner">
+    <span class="partners-label">First US university partner</span>
+    <a href="https://www.cpp.edu/" target="_blank" rel="noopener" class="partner-logo-wrap">
+      <div style="width:36px;height:36px;border-radius:8px;background:#1b3a2e;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">🎓</div>
+      <div class="partner-logo-info">
+        <div class="partner-logo-name">Cal Poly Pomona</div>
+        <div class="partner-logo-sub">California State Polytechnic University</div>
+      </div>
+    </a>
+    <div class="partners-divider"></div>
+    <div class="partners-geo">
+      <div class="geo-flags">🇺🇦 🇺🇸</div>
+      <div>
+        <div class="geo-label">Built for Ukraine and USA</div>
+        <div class="geo-sub">Two markets. One network.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ROOMS -->
 <section class="rooms" id="rooms">
@@ -633,11 +727,10 @@
           </div>
         </div>
       </div>
-      <a href="#" class="btn btn-outline-light btn-lg">Find your people →</a>
+      <a href="#" class="btn btn-outline-light btn-lg">Find your people -></a>
     </div>
-    <div class="rooms-visual-panel" id="rooms">
+    <div class="rooms-visual-panel">
       <div class="room-phone">
-        <!-- notch is ::before -->
         <div class="rp-header">
           <div class="rp-back">←</div>
           <div class="rp-room-av">📱<div class="rp-room-av-dot"></div></div>
@@ -700,7 +793,6 @@
             <div class="rp-slot-label">Marketing?</div>
           </div>
         </div>
-        <!-- Chat sheet -->
         <div class="rp-chat-sheet">
           <div class="rp-ai-suggest">
             <div class="rp-ai-avatars">
@@ -850,6 +942,95 @@
   </div>
 </section>
 
+<!-- AR SOCIAL DISCOVERY -->
+<section class="ar-section" id="ar">
+  <div class="ar-inner">
+    <div class="ar-copy">
+      <span class="section-eyebrow">AR Social Discovery</span>
+      <h2>Meet the room.<br><em>Without words.</em></h2>
+      <p>Point your phone. See who's around you. See their signal. No awkward introductions. No need for contacts. Just proximity and vibe - at the university, conference, coworking, or anywhere your people gather.</p>
+      <div class="ar-bullets">
+        <div class="ar-bullet">
+          <div class="ar-bullet-icon">📡</div>
+          <div class="ar-bullet-text">
+            <h4>See before you speak</h4>
+            <p>AR overlays show who's nearby and what they're about - before you say a single word.</p>
+          </div>
+        </div>
+        <div class="ar-bullet">
+          <div class="ar-bullet-icon">🎓</div>
+          <div class="ar-bullet-text">
+            <h4>Perfect for campus and events</h4>
+            <p>At Cal Poly Pomona, a hackathon, or a conference. Discover the person two seats away who's building the same thing.</p>
+          </div>
+        </div>
+        <div class="ar-bullet">
+          <div class="ar-bullet-icon">✨</div>
+          <div class="ar-bullet-text">
+            <h4>No contacts needed</h4>
+            <p>Connect the moment you feel the vibe. Proximity plus signal - that's how the best professional relationships start.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ar-badges">
+        <span class="ar-badge">📍 On campus</span>
+        <span class="ar-badge">🏢 At conferences</span>
+        <span class="ar-badge">💼 Coworking spaces</span>
+      </div>
+    </div>
+    <div class="ar-phone-wrap">
+      <div class="ar-phone">
+        <div class="ar-phone-inner">
+          <div class="ar-cam-view">
+            <div class="ar-cam-grid"></div>
+            <div class="ar-cam-label"><span class="ar-cam-label-dot"></span>AR LIVE · 8 NEARBY</div>
+            <div class="ar-crosshair"></div>
+
+            <!-- Person 1 - left -->
+            <div class="ar-person" style="position:absolute;bottom:95px;left:22px;align-items:center;">
+              <div class="ar-floating-card">
+                <div class="ar-fc-name">Kateryna V.</div>
+                <div class="ar-fc-vibe">AI · EdTech · Founder</div>
+                <div class="ar-fc-match">92% signal match</div>
+              </div>
+              <div style="width:38px;height:60px;border-radius:19px 19px 0 0;background:rgba(255,255,255,.07);position:relative;">
+                <div style="position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.09);"></div>
+              </div>
+            </div>
+
+            <!-- Person 2 - right -->
+            <div class="ar-person" style="position:absolute;bottom:88px;right:18px;align-items:center;">
+              <div class="ar-floating-card" style="border-color:rgba(250,177,16,.5);">
+                <div class="ar-fc-name">Mykola B.</div>
+                <div class="ar-fc-vibe">React Native · Startup</div>
+                <div class="ar-fc-match">87% signal match</div>
+              </div>
+              <div style="width:38px;height:60px;border-radius:19px 19px 0 0;background:rgba(255,255,255,.06);position:relative;">
+                <div style="position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.08);"></div>
+              </div>
+            </div>
+
+            <!-- Pulse rings on person 1 -->
+            <div style="position:absolute;bottom:130px;left:41px;">
+              <div class="ar-pulse-ring" style="width:50px;height:50px;top:50%;left:50%;animation-delay:0s;"></div>
+              <div class="ar-pulse-ring" style="width:70px;height:70px;top:50%;left:50%;animation-delay:.7s;"></div>
+            </div>
+
+            <!-- Bottom scan bar -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:36px;background:linear-gradient(to top, rgba(4,8,16,.8), transparent);display:flex;align-items:flex-end;padding:6px 14px;">
+              <span style="font-family:'Montserrat',sans-serif;font-size:7px;font-weight:700;color:rgba(250,177,16,.6);letter-spacing:.08em;text-transform:uppercase;">Scanning area · 50m radius</span>
+            </div>
+          </div>
+          <div class="ar-status-bar">
+            <span class="ar-status-label">Cal Poly Pomona Campus</span>
+            <span class="ar-status-count">8 people on signal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- AI MATCH SECTION -->
 <section class="ai-section" id="ai">
   <div class="ai-inner">
@@ -980,7 +1161,7 @@
   <div class="for-who-header">
     <span class="section-eyebrow">Who it's for</span>
     <h2>Three kinds of people<br>find <em>each other here.</em></h2>
-    <p>Зоnd is a professional proximity network for the people who build, enable, and lead the industries of tomorrow.</p>
+    <p>Зоnd is a professional proximity network for the people who build, enable, and lead the industries of tomorrow - in Ukraine and the USA.</p>
   </div>
   <div class="persona-grid">
     <div class="persona-card">
@@ -997,11 +1178,11 @@
     <div class="persona-card">
       <div class="persona-icon">🏢</div>
       <h3>Companies</h3>
-      <p>Corporates and fast-growing startups seeking innovation, talent, and partners from outside their walls.</p>
+      <p>Companies in Ukraine and the USA searching for opportunities, strategic partners, and top talent - beyond their immediate network.</p>
       <ul class="persona-features">
-        <li>Post open challenges and get solutions</li>
-        <li>Find specialized talent on signal</li>
-        <li>Host rooms to attract the right audience</li>
+        <li>Find talent and partners across Ukraine and USA</li>
+        <li>Post open challenges, discover solutions</li>
+        <li>Access the first US university network via Cal Poly Pomona</li>
         <li>See AI-matched profiles in real time</li>
       </ul>
     </div>
@@ -1019,7 +1200,7 @@
   </div>
 </section>
 
-<!-- PROJECTS & STARTUPS (new) -->
+<!-- PROJECTS & STARTUPS -->
 <section class="projects-section" id="projects">
   <div class="projects-inner">
     <div class="projects-copy">
@@ -1142,7 +1323,7 @@
     <div class="step-card">
       <div class="step-num">3</div>
       <h3>Meet your people</h3>
-      <p>Join rooms, swipe profiles, message people. Find co-founders, collaborators, mentors and teammates in one flow.</p>
+      <p>Join rooms, swipe profiles, use AR to discover nearby. Find co-founders, collaborators, mentors and teammates in one flow.</p>
     </div>
   </div>
 </section>
@@ -1201,6 +1382,11 @@
       <p>Voice rooms with persistent chat. The conversation stays accessible to all participants as long as the room is open.</p>
     </div>
     <div class="feat-card">
+      <div class="feat-icon">🔮</div>
+      <h4>AR Social Discovery</h4>
+      <p>Point your phone at the room. See who's around and their signal - without saying a word. Perfect for campus, events and coworking.</p>
+    </div>
+    <div class="feat-card">
       <div class="feat-icon">🎙</div>
       <h4>Voice Profiles</h4>
       <p>Record a short audio intro instead of a wall of text. People hear you before they meet you.</p>
@@ -1225,21 +1411,42 @@
       <h4>Zero Feed</h4>
       <p>No posts, no likes, no performative content. Only people, signals and real conversations matter here.</p>
     </div>
-    <div class="feat-card">
-      <div class="feat-icon">🌐</div>
-      <h4>Sector Networks</h4>
-      <p>Each industry gets its own proximity layer. The right people, in the right context, at the right moment.</p>
-    </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
   <h2>Your signal<br><em>is waiting.</em></h2>
-  <p>Зоnd is in beta. Join the professionals already on the network and be part of the first proximity layer for the industries that matter.</p>
+  <p>Зоnd is live on the App Store. Join the professionals in Ukraine and the USA already on the network, and be part of the first proximity layer for the industries that matter.</p>
   <div class="cta-btns">
-    <a href="https://testflight.apple.com/join/zond" class="btn btn-primary btn-lg">Join Beta on TestFlight</a>
+    <a href="https://apps.apple.com/us/app/%D0%B7ond/id6813986591" target="_blank" class="btn btn-primary btn-lg">Download on App Store</a>
     <a href="mailto:hello@zond.app" class="btn btn-outline btn-lg">Get an invite</a>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="founders-section">
+  <div class="founders-header">
+    <span class="section-eyebrow">The team behind it</span>
+    <h2>Built by <em>founders,</em><br>for founders.</h2>
+  </div>
+  <div class="founders-grid">
+    <div class="founder-card">
+      <div class="founder-av">VS</div>
+      <div class="founder-name">Viktoriia Sulzhyk</div>
+      <div class="founder-role">Co-founder</div>
+      <a href="https://www.linkedin.com/in/viktoriya-sulzhyk-7b30a8377/" target="_blank" rel="noopener" class="founder-linkedin">
+        <span class="founder-linkedin-icon">in</span> LinkedIn
+      </a>
+    </div>
+    <div class="founder-card">
+      <div class="founder-av">VS</div>
+      <div class="founder-name">Volodymyr Shevchuk</div>
+      <div class="founder-role">Co-founder</div>
+      <a href="https://www.linkedin.com/in/shevchukvolodymyr/" target="_blank" rel="noopener" class="founder-linkedin">
+        <span class="founder-linkedin-icon">in</span> LinkedIn
+      </a>
+    </div>
   </div>
 </section>
 
